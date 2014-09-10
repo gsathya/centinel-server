@@ -21,7 +21,6 @@ class MyTest(TestCase):
     def create_app(self):
         self.app = Flask(__name__)
         self.app.config['TESTING'] = True
-        self.app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///%s' % (config.sqlite_db)
         return app
 
     def setUp(self):
